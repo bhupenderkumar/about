@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1617373069105,
+  "timestamp": 1617383470326,
   "index": "/about/index.html",
   "assetGroups": [
     {
@@ -15,12 +15,14 @@
         "/about/index.html",
         "/about/main.3d733d8b50f4e9c58df5.js",
         "/about/main.8faba1b68b72add09fb8.js",
+        "/about/main.9c8885b9b2185af05185.js",
         "/about/manifest.webmanifest",
         "/about/ngsw-worker.js",
         "/about/polyfills.94daefd414b8355106ab.js",
         "/about/runtime.7b63b9fd40098a2e8207.js",
         "/about/runtime.aa37df221267288cb830.js",
         "/about/safety-worker.js",
+        "/about/styles.d497fc2469b10a36a6fa.css",
         "/about/styles.e3b29d0425b7d3764d6d.css",
         "/about/worker-basic.min.js"
       ],
@@ -58,9 +60,10 @@
     "/about/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/about/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/about/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/about/index.html": "ce4d44078988af278fe64eef57f4c447fe5a3621",
+    "/about/index.html": "18bf833a7da4cf23667b365e12f84b65be34b6d1",
     "/about/main.3d733d8b50f4e9c58df5.js": "cdccfbd4558689d54552ab92004a470bfcfb68f5",
     "/about/main.8faba1b68b72add09fb8.js": "ab8627815bdca29602462a916765e1b748d040da",
+    "/about/main.9c8885b9b2185af05185.js": "6c8d2e780b5d4636a2779525a55a68c0d3f9c937",
     "/about/manifest.webmanifest": "50972a4fb98487bcba539dc8840f6b13ee0614e9",
     "/about/ngsw-worker.js": "b44316be1c1338e9e8bd30ee40946085916c58e4",
     "/about/photo.jpg": "b8c08b3416acbd0bee87a0b54f89f5b4fee28231",
@@ -68,6 +71,7 @@
     "/about/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/about/runtime.aa37df221267288cb830.js": "a1efc1c3da4542a14d8c37df39fab6eb433a32ca",
     "/about/safety-worker.js": "f532926317210be6e2679d21748dc44a35389807",
+    "/about/styles.d497fc2469b10a36a6fa.css": "2de01cd81b9b2582601e5f845deae3102fafaf71",
     "/about/styles.e3b29d0425b7d3764d6d.css": "5b2b0798d739561e95aebab9c19faccad23d76a7",
     "/about/worker-basic.min.js": "f532926317210be6e2679d21748dc44a35389807"
   },
