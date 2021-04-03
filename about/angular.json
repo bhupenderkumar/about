@@ -29,6 +29,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/BhupenderJavaSoftwareEngineer.pdf",
+              "src/ProfilePicture.jpg",
               "src/manifest.webmanifest"
             ],
             "styles": [
@@ -95,7 +97,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/BhupenderJavaSoftwareEngineer.pdf",
+              "src/assets", "src/ProfilePicture.jpg",
               "src/manifest.webmanifest"
             ],
             "styles": [

@@ -34,5 +34,5 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {type:'Expected CTC',value:'Minimal'},
   {type:'Notice Period ',value:'Currently Serving'},
   {type:'Availability',value:'Yes'},
-  {type:'want more Information?',value:"Please send email to sharmakbhupender@gmail.com"}
+  {type:'Require more Information?',value:"Please send email to sharmakbhupender@gmail.com"}
 ];
