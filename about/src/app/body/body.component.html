@@ -15,12 +15,14 @@ Certification.
             </li>
         </ul>
   </div>
-<div></div>
-<div mat-card-avatar class="example-header-image"></div>  <div class="container">
-  <a href="mailto:sharmakbhupender@gmail.com?subject=Software Engineer Oppurtunity&body=Please get in touch"> <button mat-raised-button *ngIf="dateLeft" color="primary"> <span>
+
+ <div class="container col-lg-12 col-md-12" style="padding:20px">
+ <div class="col-lg-4">
+    <a href="mailto:sharmakbhupender@gmail.com?subject=Software Engineer Opportunity&body=Please get in touch"> <button mat-raised-button *ngIf="dateLeft" color="primary"> <span>
     Serving Notice Period - {{dateLeft}} | Hire Me </span>
-    </button></a> 
-    <span style="margin: 16px;" class="global-nav__branding">
+    </button></a> </div>
+    <div class="col-lg-4" style="padding:10px">
+    <span  class="global-nav__branding">
         <a href="https://www.linkedin.com/in/bhupender-sharma-51b7b0174/" target="_blank" id="ember16" class="ember-view" data-link-to="feed">
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" class="global-nav__logo">
               <title>
@@ -33,9 +35,12 @@ Certification.
             </svg>
             </a>
         </span>
+    </div>
+    <div class="col-lg-4">
        <a href="assets/BhupenderJavaSoftwareEngineer.pdf" download="BhupenderSoftwareEngineer.pdf" target="_self">
         <button mat-raised-button *ngIf="dateLeft" color="primary"><i class="fa fa-download" aria-hidden="true"></i>
             <span> Download Resume</span></button></a>
+            </div>
 </div>
 <span>
     <pre>
