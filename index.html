@@ -17,16 +17,18 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 2rem 1rem;
+            padding: 0; /* Remove padding */
+            margin: 0; /* Ensure no margin */
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            width: 100%; /* Full width */
+            max-width: none; /* Remove max-width */
+            margin: 0; /* Remove margin */
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 0; /* Remove border-radius */
+            box-shadow: none; /* Remove box-shadow */
             overflow: hidden;
             animation: fadeInUp 0.8s ease-out;
         }
