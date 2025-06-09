@@ -1,0 +1,23 @@
+{
+  "name": "about-app",
+  "version": "1.0.0",
+  "description": "Simple React About App",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

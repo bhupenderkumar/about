@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bhupender Kumar Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .achievement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .achievement-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .achievement-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #3498db;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-header h4 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .project-type {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            color: #3498db;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: rgba(52, 152, 219, 0.1);
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #2980b9;
+            transform: translateX(5px);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .education-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .education-icon {
+            font-size: 2rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .education-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .education-content p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        .education-year {
+            color: #3498db !important;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .content {
+                padding: 2rem 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bhupender Kumar Sharma</h1>
+            <div class="title">Senior Java Backend Developer & Web3 Engineer</div>
+            <div class="contact-info">
+                <a href="mailto:sharmakbhupender@gmail.com" class="contact-item">
+                    📧 sharmakbhupender@gmail.com
+                </a>
+                <a href="tel:+919717267473" class="contact-item">
+                    📱 +91 9717267473
+                </a>
+                <a href="https://github.com/bhupenderkumar" class="contact-item" target="_blank">
+                    🔗 GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/bhupik" class="contact-item" target="_blank">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>
+                    I'm a highly accomplished Senior Java Backend Developer and Web3 Engineer with over 12 years of experience in designing, developing, and deploying high-performance enterprise applications. My expertise spans across modern Java ecosystems, microservices architecture, blockchain technologies, and cloud-native solutions, with a proven track record of leading teams and architecting complex distributed systems.
+                </p>
+                <p>
+                    Specializing in server-side Java development with Spring Boot, microservices, and emerging Web3 technologies including Solana blockchain integration. Currently seeking challenging backend engineering opportunities where I can drive technical innovation and deliver scalable, high-performance solutions.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Key Achievements</h2>
+                <div class="achievement-list">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🚀</div>
+                        <div class="achievement-content">
+                            <h4>High-Performance Microservices</h4>
+                            <p>Architected and developed Java microservices processing 1M+ transactions per second with 55% response time improvement using Spring Boot and Kafka integration.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">⛓️</div>
+                        <div class="achievement-content">
+                            <h4>Solana Blockchain Integration</h4>
+                            <p>Built secure DeFi application with Solana integration, achieving 15,000+ TPS and 60% transaction speed improvement through optimized Java-blockchain architecture.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">☁️</div>
+                        <div class="achievement-content">
+                            <h4>Cloud Migration & DevOps</h4>
+                            <p>Led Java 8+ migration and AWS cloud deployment, reducing infrastructure costs by 30% and deployment time by 80% through automated CI/CD pipelines.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">🤖</div>
+                        <div class="achievement-content">
+                            <h4>ML Integration & Automation</h4>
+                            <p>Integrated Python ML models with Java backend systems, improving forecasting accuracy by 25% and reducing manual processing time by 75%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Personal Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Agentia Creator</h4>
+                            <span class="project-type">AI • TypeScript • Java</span>
+                        </div>
+                        <p>Innovative AI-powered content creation platform with Java Spring Boot backend and TypeScript frontend. Features intelligent content generation, user management, and scalable microservices architecture.</p>
+                        <div class="project-tech">Java 11, Spring Boot, TypeScript, PostgreSQL, Redis, Docker</div>
+                        <a href="https://github.com/bhupenderkumar/agentia-creator" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>AI System Design Backend</h4>
+                            <span class="project-type">AI • Backend • TypeScript</span>
+                        </div>
+                        <p>Comprehensive backend system for AI-driven system design tools. Built with modern TypeScript and Java integration, featuring real-time processing, algorithm optimization, and scalable architecture.</p>
+                        <div class="project-tech">TypeScript, Java, Spring Boot, Machine Learning APIs, AWS</div>
+                        <a href="https://github.com/bhupenderkumar/aisystemdesignbackend" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Building Helper</h4>
+                            <span class="project-type">Construction • Java • Web</span>
+                        </div>
+                        <p>Complete construction management platform helping customers streamline their building projects. Java-based backend with comprehensive project management, cost estimation, and contractor coordination features.</p>
+                        <div class="project-tech">Java 8, Spring Boot, MySQL, Angular, REST APIs, Maven</div>
+                        <a href="https://github.com/bhupenderkumar/buildinghelper" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>CryptoPatch</h4>
+                            <span class="project-type">Crypto • JavaScript • Security</span>
+                        </div>
+                        <p>Advanced cryptocurrency security and patching tool built with JavaScript and Java backend integration. Features vulnerability scanning, security patches, and blockchain transaction monitoring.</p>
+                        <div class="project-tech">JavaScript, Java, Spring Security, Blockchain APIs, MongoDB</div>
+                        <a href="https://github.com/bhupenderkumar/CryptoPatch" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>CryptoPrice Tracker</h4>
+                            <span class="project-type">Fintech • Java • APIs</span>
+                        </div>
+                        <p>Real-time cryptocurrency price tracking application with Java backend. Features live price feeds, portfolio management, alerts system, and comprehensive market analysis tools.</p>
+                        <div class="project-tech">Java 11, Spring Boot, External APIs, WebSocket, PostgreSQL</div>
+                        <a href="https://github.com/bhupenderkumar/CryptoPrice" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h4>Edu Connect Gateway</h4>
+                            <span class="project-type">Education • TypeScript • Gateway</span>
+                        </div>
+                        <p>Educational platform API gateway built with TypeScript and Java microservices. Provides secure authentication, course management, student tracking, and integrated learning management system.</p>
+                        <div class="project-tech">TypeScript, Java, Spring Cloud Gateway, OAuth2, Microservices</div>
+                        <a href="https://github.com/bhupenderkumar/edu-connect-gateway" class="project-link" target="_blank">🔗 View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education & Certifications</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">🎓</div>
+                        <div class="education-content">
+                            <h4>Bachelor of Technology</h4>
+                            <p><strong>Computer Science Engineering</strong></p>
+                            <p class="education-year">Graduated: April 2014</p>
+                            <p>Strong foundation in algorithms, data structures, software engineering principles, and computer science fundamentals.</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">☁️</div>
+                        <div class="education-content">
+                            <h4>AWS Certified Solutions Architect</h4>
+                            <p><strong>Amazon Web Services</strong></p>
+                            <p class="education-year">Professional Level</p>
+                            <p>Expertise in designing distributed systems and applications on AWS platform with focus on scalability and reliability.</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">⛓️</div>
+                        <div class="education-content">
+                            <h4>Solana Developer Certification</h4>
+                            <p><strong>Solana Foundation</strong></p>
+                            <p class="education-year">Blockchain Specialist</p>
+                            <p>Advanced certification in Solana blockchain development, smart contracts, and DeFi application architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Core Java Backend</h3>
+                        <p>Java 8+, Spring Boot, Spring Framework, Hibernate JPA, Maven, Gradle</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Microservices & APIs</h3>
+                        <p>RESTful APIs, SOAP Services, Apache Kafka, Message Queues, Service Discovery</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web3 & Blockchain</h3>
+                        <p>Solana, Solidity, DeFi Applications, Smart Contracts, Cryptocurrency Integration</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases & Persistence</h3>
+                        <p>PostgreSQL, MySQL, MongoDB, Oracle, SQL Server, Redis, Data Modeling</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <p>AWS (EC2, S3, Lambda, Kubernetes, Docker), Kafka, ELK Stack, Jenkins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+                <p>
+                    Throughout my career, I've specialized in <strong>Java backend development</strong> with industry-leading companies including <strong>Lab49</strong>, <strong>Colt Technology</strong>, <strong>Bureau Veritas</strong>, and <strong>DXC Technology</strong>. My expertise focuses on building enterprise-grade backend systems, microservices architectures, and integrating cutting-edge Web3 technologies.
+                </p>
+                <p>
+                    I excel in modernizing legacy Java applications, implementing scalable microservices with Spring Boot, and pioneering blockchain integrations particularly with <strong>Solana ecosystem</strong>. My recent achievements include developing high-throughput financial data processing systems, creating secure DeFi backend services, and implementing comprehensive DevOps practices that have revolutionized deployment efficiency across organizations.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
